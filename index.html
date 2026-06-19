@@ -3,15 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robomaker Kits Educacionais</title>
-    <!--CSS interno-->
-    </style>
-        
-    </style>
-</head>
-<body><title>Projeto Robomaker</title>
+    <title>Projeto Robomaker</title>
     <style>
-      * {
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -30,87 +24,144 @@
             color: #1a1a1a;
             margin-bottom: 1rem;
         }
+
         p {
             margin-bottom: 1rem;
         }
 
         a {
-            text-decoration: none;
             color: inherit;
+            text-decoration: none;
         }
 
         ul {
             list-style: none;
         }
+
         .cabecalhoPrincipal {
             background-color: #ffffff;
-            padding: 1, 5rem 5%;
-            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+            padding: 1.5rem 5%;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
+
         .titulo {
             font-size: 1.8rem;
             font-weight: bold;
             color: #d32f2f;
         }
-        .ListaNavegacao {
+
+        .listaNavegacao {
             display: flex;
             gap: 2rem;
         }
-        .LinkNav {
+
+        .linkNav {
             font-weight: 500;
             transition: color 0.3s ease;
         }
 
-        .LinkNav:hover {
+        .linkNav:hover {
             color: #d32f2f;
         }
-        .botaoPrincipal {
+
+        .botaoPricipal {
             display: inline-block;
-            background-color: #b71b1b;
+            background-color: #d32f2f;
             color: #ffffff;
             padding: 0.8rem 1.5rem;
-            border-radius: 6px;
+            border-radius: 4px;
             font-weight: bold;
             margin-top: 1rem;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
-        .botaoPrincipal:hover {
-            background-color: #b71b1b;
+
+        .botaoPricipal:hover {
+            background-color: #b71c1c;
             color: #ffffff;
         }
 
+        .container {
+            padding: 4rem 5%;
+        }
 
+        .tituloSecao {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .gradeInstrumentos {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cartaoInstrumento {
+            background-color: #ffffff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .cartaoInstrumento:hover {
+            transform: translateY(-5px);
+        }
+
+        .nomeInstrumento {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333333;
+        }
+
+        .rodape {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding: 3rem 5%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .rodape h2,
+        .rodape h3 {
+            color: #ffffff;
+        }
     </style>
 </head>
 <body>
     <!--Cabeçalho-->
     <header id="header" class="cabecalhoPrincipal">
-      <div id="logo">
+        <div id="logo">
         <h1 class="titulo">RoboMaker Kids Educacionais</h1>
-      </div>
+        </div>
         <nav>
-            <ul class="ListaNavegacao">
+            <ul class="listaNavegacao">
                 <li>
-                    <a href="#categorias" class="LinkNav">categorias</a>
+                    <a href="#categorias" class="linkNav">categorias</a>
                 </li>
                 <li>
-                    <a href="#produtos" class="LinkNav">produtos</a>
+                    <a href="#produtos" class="linkNav">produtos</a>
                 </li>
                 <li>
-                    <a href="#cursos" class="LinkNav">cursos</a>
+                    <a href="#cursos" class="linkNav">cursos</a>
                 </li>
                 <li>
-                    <a href="cadastro.html" class="LinkNav">cadastre-se</a>
+                    <a href="cadastro.html" class="linkNav">cadastre-se</a>
                 </li>
             </ul>
         </nav>
     </header>
     <!--categorias-->
     <main>
-        <section id="#categorias" class="secaoHero"
+        <section id="#categorias" class="tituloSecao"
             style="background-color: #eceff1; text-align: center ; padding: 5rem 2rem; border-bottom: 4px solid #d32f2f;">
             <h2 style="font-size: 3rem;color: #1a1a1a;">Nossas Categorias</h2>
             <ul style="text-align: left;display: inline-block;margin-top: 1rem;">
@@ -118,96 +169,98 @@
             <li style="margin-bottom: 0.5rem">Sensores</li> 
             <li style="margin-bottom: 0.5rem">Motores e Servos</li>
             <li style="margin-bottom: 0.5rem">Estruturas de Montagem.</li>
-            <a href="#" class="botaoPrincipal">ver as nossas ofertas</a>
+                <a href="#" class="botaoPricipal">ver as nossas ofertas</a>
             </ul>
         </section>
 
         <section id="produtos" class="container" style="background-color: #eeeeeeee;">
-          <h2 class="tituloSecao">cátalogo</h2>
-          <div class="gradePecas">
-            <article class="cartaoPeca">
-                <h3 class="nomePeca">Placas Microcontroladoras</h3>
-                <img src="https://images.unsplash.com/photo-1603732551658-5fabbafa84eb" alt="Placas Microcontroladoras" width="300"
-                 style="border-radius: 4px; margin-bottom: 1rem;">
+            <h2 class="tituloSecao">cátalogo</h2>
+            <div class="gradeInstrumentos">
+                <article class="cartaoInstrumento">
+                <h3 class="nomeInstrumento">Placas Microcontroladoras</h3>
+                <img src="https://images.unsplash.com/photo-1603732551658-5fabbafa84eb" alt="Placas Microcontroladoras" width="200"
+                style="border-radius: 4px; margin-bottom: 1rem;">
                 <p>Pronta para o uso,economiza tempo eliminando soldas complexas de componentes básicos. Além do custo-benefício imbatível: Chips de alta tecnologia e conectores integrados por um preço acessível.Ecossistema global: Milhares de bibliotecas prontas e códigos gratuitos disponíveis na internet.Hardware reutilizável: Escreva, apague e regrave novos códigos quantas vezes você quiser.Conectividade simplificada: Conecte sensores de temperatura, motores e displays de forma direta.</p>
-                <strong >90,00</strong>
+                <strong style="color: #d32f2f; font-weight: bold; font-size: 1.2rem;"> Preço:90,00 </strong>
             </article>
-             <article>
-          <h3>
+                <article class="cartaoInstrumento">
+            <h3 class="nomeInstrumento">
             Sensores
-          </h3>
-          <img
+            </h3>
+            <img
             src="https://images.unsplash.com/photo-1599508266124-804fc6eecf09"
             alt="Sensores"
-            width="300"
-          />
-          <p>
+            width="200"
+            style="border-radius: 4px; margin-bottom: 1rem;"
+            />
+            <p>
             Proteção Máxima: Evite que sua CPU ou placa de vídeo queimem por superaquecimento com alertas em tempo real.Economia de Dinheiro: Monitore a estabilidade da sua fonte de energia e evite danos caros aos seus componentes.Silêncio e Eficiência: Controle a velocidade exata das ventoinhas para um PC silencioso quando você estuda e poderoso quando você joga.Visual Gamer Premium: Compatível com mini telas de monitoramento USB para deixar o interior do seu gabinete com visual futurista e profissional.
-          </p>
-          <strong>Preço:47,00 </strong>
+            </p>
+            <strong style="color: #d32f2f; font-weight: bold; font-size: 1.2rem;">Preço:47,00 </strong>
         </article>
 
-        <article>
-          <h3>Micro servo motor</h3>
-          <img
+        <article class="cartaoInstrumento">
+            <h3 class="nomeInstrumento">Micro servo motor</h3>
+            <img
             src="https://http2.mlstatic.com/D_NQ_NP_2X_625145-MLA99599446100_122025-F.webp"
             alt="mrico servo motor"
-            width="300"
-          />
-          <p>
+            width="200"
+            style="border-radius: 4px; margin-bottom: 1rem;"
+            />
+            <p>
             ensão de alimentação de 4,8V a 6V para operação eficiente. Ângulo de
             rotação de 360 graus para movimentos completos. Peso leve de apenas
             10g, ideal para projetos compactos.
-          </p>
-          <strong>Preço:25,50</strong>
+            </p>
+            <strong style="color: #d32f2f; font-weight: bold; font-size: 1.2rem;">Preço:25,50</strong>
         </article>
 
-        <article>
-          <h3>Motor eletrico</h3>
-          <img
+        <article class="cartaoInstrumento">
+            <h3 class="nomeInstrumento">Motor eletrico</h3>
+            <img
             src="https://images.unsplash.com/photo-1600614518987-f9c081f69e0e"
             alt="Estrutura de Montagem"
-            width="300"
-          />
-          <p>
+            width="200"
+            style="border-radius: 4px; margin-bottom: 1rem;"
+            />
+            <p>
             Gabinete Premium Mid/Full Tower: Para quem busca um visual imponente, painel de vidro temperado e espaço de sobra para refrigeração líquida personalizada.Suporte de Bancada Aberta (Open Air Test Bench): Ideal para entusiastas, técnicos ou mineradores que trocam de peças frequentemente e precisam de acesso 100% livre.Estrutura de Rack para Servidores: Focada em empresas que precisam de empilhamento seguro, aterramento e máxima densidade de hardware em salas de TI.
-          </p>
-          <strong>Preço:130,00</strong>
+            </p>
+            <strong style="color: #d32f2f; font-weight: bold; font-size: 1.2rem;">Preço:130,00</strong>
         </article>
-      </section>
+        </section>
+            </div>
 
-          </div>
-
-      <section id="curso">
+        <section id="curso">
         <h2>Oicinas Presenciais</h2>
         <table border="1">
-          <thead>
+            <thead>
             <tr>
-              <th>Curso</th>
-              <th>Duração</th>
-              <th>Valor</th>
+                <th>Curso</th>
+                <th>Duração</th>
+                <th>Valor</th>
             </tr>
-          </thead>
-          <tbody>
+            </thead>
+            <tbody>
             <td>Lógica e Pensamento Computacional</td>
             <td>40h</td>
             <td>R$250,00</td>
-          </tbody>
+            </tbody>
         </table>
-      </section>
+        </section>
     </main>
-    <footer>
-       <nav>
-    <h3>Informações</h3>
-    <ul>
+    <footer id="footer" class="rodape">
+    <nav style="flex: 1; min-width: 150px;">
+    <h3 style="border-bottom: 2px solid #d32f2f; padding-bottom: 0.5rem; display: inline-block;">Informações</h3>
+            <ul style="margin-top: 1rem; line-height: 2;">
         <li>
-            <a href="">Termos De Uso</a>
+            <a href="#" class="linkNav">Termos De Uso</a>
         </li>
         <li>
-            <a href="">Política de Privacidade</a>
+            <a href="#" class="linkNav">Política de Privacidade</a>
         </li>
         <li>
-            <a href="">Trocas e Devoluções</a>
+            <a href="#" class="linkNav">Trocas e Devoluções</a>
         </li>
     </ul>
 </nav>
@@ -222,14 +275,13 @@
         <img src="facebook.png" alt="Facebook">
     </a>
     <a href="">
-        <img src="Youtube.png" alt="Youtube">
+        <img src="youtube.png" alt="Youtube">
     </a>
     </div>
 </div>
-Copyright &copy;2026 Compasso Musical - Todos os diretos reervados. Site desenvolvido por Matheus.
+Copyright &copy;2026 Compasso Musical - Todos os diretos reervados. Site desenvolvido por Gabrielly Alexandra.
     </footer>
         </section>
     </main>
 </body>
 </html>
-    

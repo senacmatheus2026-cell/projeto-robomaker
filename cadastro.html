@@ -1,69 +1,198 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de novo usuario</title>
+    <title>Cadastro - RoboMaker</title>
+    <!--CSS Interno-->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #333333;
+            line-height: 1.6;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .cabecalhoPrincipal {
+            background-color: #ffffff;
+            padding: 1.5rem 5%;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .titulo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #d32f2f;
+        }
+
+        .listaNavegacao {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .linkNav {
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .linkNav:hover {
+            color: #d32f2f;
+        }
+
+        .botaoPrincipal {
+            display: inline-block;
+            background-color: #d32f2f;
+            color: #ffffff;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .botaoPrincipal:hover {
+            background-color: #b71c1c;
+            color: #ffffff;
+        }
+
+        .container {
+            padding: 4rem 5%;
+        }
+
+        .tituloSecao {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .formCard {
+            max-width: 720px;
+            margin: 2rem auto;
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .formCard label {
+            display: block;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+
+        .formCard input,
+        .formCard select,
+        .formCard textarea {
+            width: 100%;
+            padding: 0.9rem 1rem;
+            margin-top: 0.5rem;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            background: #fbfcfe;
+        }
+
+        .formCard textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        .gridRadio {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 0.5rem;
+        }
+
+        .gridRadio label {
+            font-weight: 500;
+        }
+
+        footer {
+            margin: 2rem auto 1.5rem;
+            text-align: center;
+            color: #616161;
+        }
+    </style>
 </head>
+
 <body>
-    <body>
-    <!-- Cabeçalho -->
-    <header>
-        <h1>Crie sua Conta</h1>
+    <header class="cabecalhoPrincipal">
+        <div class="titulo">RoboMaker</div>
         <nav>
-            <a href="index.html">Voltar para a página inicial</a>
+            <a href="index.html" class="linkNav">Voltar para a página inicial</a>
         </nav>
     </header>
-<br><br>
-    <!-- Formulário de Cadastro -->
-    <main>
-        <section>
-            <form>
-                <div>
-                    <label for="nome">Nome Completo:</label>
-                    <input type="text" id="nome" name="nome" required>
-                </div>
-                <br>
-                <div>
-                    <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <br>
-                <div>
-                    <label for="senha">Senha:</label>
-                    <input type="password" id="senha" name="senha" required>
-                </div>
-                <br>
-                <div>
-                    <label>Perfil de Aluno:</label>
-                    <label>
-                        <input type="radio" name="perfil" value="estudante" required>
-                        Estudante
-                    </label>
-                    <label>
-                        <input type="radio" name="perfil" value="professor">
-                        Professor/Hobbista
-                    </label>
-                </div>
 
-                <div>
-                    <label for="trilha">Trilha de Interesse:</label>
+    <main>
+        <section class="container">
+            <h2 class="tituloSecao">Crie sua conta RoboMaker</h2>
+            <div class="formCard">
+                <form>
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" required>
+
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" required>
+
+                    <label>Perfil</label>
+                    <div class="gridRadio">
+                        <label><input type="radio" name="perfil" value="estudante" required> Estudante</label>
+                        <label><input type="radio" name="perfil" value="professor"> Professor/Hobbista</label>
+                    </div>
+
+                    <label for="trilha">Trilha de Interesse</label>
                     <select id="trilha" name="trilha" required>
                         <option value="">Selecione uma trilha</option>
                         <option value="basica">Robótica Básica</option>
                         <option value="ia">Inteligência Artificial</option>
                         <option value="programacao">Programação</option>
                     </select>
-                </div>
 
-                <button type="submit">Cadastrar</button>
-            </form>
+                    <button type="submit" class="botaoPrincipal">Cadastrar</button>
+                </form>
+            </div>
         </section>
     </main>
 
-    <!-- Rodapé -->
     <footer>
         <p>&copy; 2026 RoboMaker Kits Educacionais.</p>
     </footer>
 </body>
+
 </html>
